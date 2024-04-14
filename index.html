@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+    display: flex;
+    align-items: center;
+}
+
+ .head {
+    background-color: rgb(247, 125, 125);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#btn {
+    background-color: rgb(255, 184, 184);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #959292;
+}
+    
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input_box {
+    height: 200px;
+    width: 30%;
+    background-color: #1bc581;
+    border-radius: 5px;
+    margin-left: 100px;
+    padding-left: 25px;
+    padding-top: 30px;
+}
+
+.time {
+    height: 180px;
+    width: 240px;
+    background-color: #0d0d0d;
+    border-radius: 300px;
+    padding-left: 25px;
+    padding-top: 50px;
+}
+
+#stopwatch {
+    color: #90f514;
+    font-size: 24px;
+    margin-left: 30px;
+    margin-bottom: 25px;    
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3f3f3f;
+    color: white;
+    margin-left: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #90f514;
+}
+
+select, input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+} 
+
+    </style>
+</head>
+    <!-- <h1 id="h1">Hello World</h1>
+    <br>
+    <button id="btn" onclick="myFunc()" >Select</button>
+
+    <button id="Button" onclick="myFunc()">
+        Click Me
+    </button>
+    <br>
+    <br>
+    <br>
+    <hr>
+ -->
+
+    <h2>Task Data</h2>
+    <div class="Input">
+        <div class="container">
+            <div class="time">
+                <p id="stopwatch">00 : 00 : 00 : 00</p>
+                <button id="startStop" onclick="startstop()">Start</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+            <div class="input_box">
+                <label for="task1">Task:</label>
+                <select id="task1">
+                    <option value="personal break">Personal Break</option>
+                    <option value="meeting">Meeting</option>
+                    <option value="project work">Project Work</option>
+                </select> <br><br>
+                <label for="description1">Description:</label>
+                <select id="description1">
+                    <option value="Game">Game</option>
+                    <option value="client meeting">client meeting</option>
+                    <option value="develop project">develop project</option>
+                    <option value="client 2 meeting">client 2 meeting</option>
+                    <option value="Travel">Travel</option>
+                    <option value="-">-</option>
+                </select><br><br>
+                <label for="duration1">Duration</label>
+                <input type="text" id="duration1" placeholder="00 : 00 : 00">
+            </div>
+        </div>
+<!-- --------------------------------------------------------------------- -->
+                <br>
+                <br>
+                <button onclick="addAll()"> Submit</button>
+                <button onclick="update()">Update</button>
+        </div>
+
+
+      <br>
+      <hr>
+      <br>
+
+      <select name="select" id="taskselect">
+        <option value="All">All</option>
+        <option value="personal break">personal break</option>
+        <option value="meeting">meeting</option>
+        <option value="project work">project work</option>
+      </select>
+      <br>
+      <br>
+<table>
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="taskData">
+    </tbody>
+</table>
+
+    <script src="script.js"></script>
+</body>
+</html>
